@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aiwyn Abraham Anish | Portfolio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050505;
+      --surface: #111111;
+      --surface-soft: #1a1a1a;
+      --text: #f6f6f6;
+      --muted: #b7b7b7;
+      --red: #e11d23;
+      --red-soft: rgba(225, 29, 35, 0.15);
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 30px 80px rgba(0,0,0,0.45);
+      font-synthesis: none;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, rgba(225,29,35,0.07), transparent 32%),
+                  linear-gradient(180deg, #0c0c0c 0%, #050505 100%);
+      color: var(--text);
+      font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    header {
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 0.95rem;
+      letter-spacing: 0.27em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 180ms ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      min-height: calc(100vh - 120px);
+      display: grid;
+      place-items: center;
+      padding: 40px 0 60px;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 36px;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.82rem;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 36px;
+      height: 1px;
+      background: var(--red);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 5vw, 4.4rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+      margin-bottom: 22px;
+    }
+
+    .intro {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 18px 36px rgba(225,29,35,0.28);
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.14);
+      color: var(--text);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(225,29,35,0.18), transparent 26%);
+      pointer-events: none;
+    }
+
+    .hero-card h2 {
+      margin-bottom: 14px;
+      font-size: 1.4rem;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    section {
+      margin-top: 84px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      font-size: 2rem;
+      letter-spacing: -0.04em;
+    }
+
+    .section-heading span {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.78rem;
+    }
+
+    .content-grid {
+      display: grid;
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      overflow: hidden;
+      transition: transform 180ms ease, border-color 180ms ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(225,29,35,0.3);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.04) 100%);
+      pointer-events: none;
+    }
+
+    .card h3 {
+      margin-bottom: 16px;
+      font-size: 1.15rem;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 20px;
+    }
+
+    .skill-item h4 {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .skills-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      padding-left: 0;
+    }
+
+    .skills-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .skills-list li::before {
+      content: '•';
+      color: var(--red);
+      line-height: 1;
+      margin-top: 3px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      padding: 26px;
+      min-height: 200px;
+    }
+
+    .project-card p {
+      margin-top: 16px;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 22px;
+      padding: 32px;
+      background: linear-gradient(180deg, rgba(225,29,35,0.18), rgba(255,255,255,0.04));
+      border: 1px solid rgba(225,29,35,0.22);
+      border-radius: 28px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 12px;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        min-height: auto;
+        padding-top: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-grid {
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 24px 16px 40px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .hero-card,
+      .card,
+      .contact-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">Aiwyn Anish</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Future Software Engineer</div>
+            <h1>Bold software thinking for efficient, scalable, user-focused solutions.</h1>
+            <p class="intro">I am Aiwyn Abraham Anish, a Software Engineering student based in Berlin with strong interests in software development, emerging technologies, and innovative problem-solving. I build reliable systems through continuous learning, collaboration, and a passion for technology that matters.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#contact">Get in Touch</a>
+              <a class="button secondary" href="#skills">View Skills</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h2>Profile</h2>
+            <p>Studying Software Engineering at Gimsa University of Applied Sciences with expected graduation in 2029. Driven by a goal to become a skilled engineer who delivers impactful projects and solves problems with modern tech.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-heading">
+          <span>About</span>
+          <h2>Who I am</h2>
+        </div>
+        <div class="content-grid">
+          <div class="card">
+            <h3>Personal Summary</h3>
+            <p>I thrive in collaborative environments, value continuous learning, and enjoy taking on challenges that foster both personal and professional growth. I am committed to enhancing my technical expertise and applying my knowledge to build efficient, scalable, and user-centered solutions.</p>
+          </div>
+          <div class="card">
+            <h3>My Approach</h3>
+            <p>My work is guided by strong fundamentals, thoughtful architecture, and a tech-inspired mindset. I focus on clean code, useful interfaces, and steady improvement while staying adaptable to emerging technologies.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-heading">
+          <span>Skills</span>
+          <h2>Core strengths</h2>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-item">
+            <h4>Programming</h4>
+            <ul class="skills-list">
+              <li>Java, Python, C++</li>
+              <li>Object-oriented programming</li>
+              <li>Data structures and algorithms</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <h4>Web Fundamentals</h4>
+            <ul class="skills-list">
+              <li>HTML, CSS, JavaScript</li>
+              <li>Responsive layout design</li>
+              <li>User-focused interfaces</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <h4>Tools & Workflow</h4>
+            <ul class="skills-list">
+              <li>Database management and SQL</li>
+              <li>Git and GitHub</li>
+              <li>Agile and project fundamentals</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <h4>Professional qualities</h4>
+            <ul class="skills-list">
+              <li>Problem-solving and analytical thinking</li>
+              <li>Team collaboration and communication</li>
+              <li>Continuous learning and adaptability</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="section-heading">
+          <span>Education</span>
+          <h2>Academic progress</h2>
+        </div>
+        <div class="stats">
+          <div class="stat-card">
+            <strong>BEng Software Engineering</strong>
+            <span>Gimsa University of Applied Sciences</span>
+            <span>Expected Graduation: 2029</span>
+          </div>
+          <div class="stat-card">
+            <strong>Berlin-Based Student</strong>
+            <span>Focused on scalable, user-centered technology solutions.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Growing skill set</strong>
+            <span>Strong fundamentals in development, algorithms, and modern engineering workflows.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <div class="section-heading">
+          <span>Portfolio</span>
+          <h2>Projects & exploration</h2>
+        </div>
+        <div class="portfolio-grid">
+          <div class="card project-card">
+            <h3>Work in progress</h3>
+            <p>No completed projects yet, but actively exploring web development, software systems, database design, and toolchains that support scalable applications. Future projects will showcase practical engineering and clean execution.</p>
+          </div>
+          <div class="card project-card">
+            <h3>Future focus</h3>
+            <p>Planned project topics include web applications, backend services, algorithmic problem solving, and student-focused technology demonstrations with polished interfaces.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-heading">
+          <span>Contact</span>
+          <h2>Let’s connect</h2>
+        </div>
+        <div class="contact-card">
+          <h3>Reach out for opportunities</h3>
+          <p>If you’re looking for an ambitious software engineering student with strong fundamentals, a growth mindset, and a tech-forward approach, connect via email to discuss internships, collaborations, or future projects.</p>
+          <p><strong>Email:</strong> <a href="mailto:aiwynanish48@gmail.com" style="color: var(--red); text-decoration: none;">aiwynanish48@gmail.com</a></p>
+          <a class="button primary" href="mailto:aiwynanish48@gmail.com">Email Aiwyn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Aiwyn Abraham Anish — Modern software portfolio designed with a bold red and black tech aesthetic.
+    </footer>
+  </div>
+</body>
+</html>
