@@ -51,44 +51,6 @@ It includes:
 * Contact information
 * Links to my CV and GitHub repository
 
-## Featured Projects
-
-### Python Expense Tracker
-
-A command-line application for recording expenses, storing them in a CSV file, and viewing spending summaries by category.
-
-**Skills demonstrated:**
-
-* Python programming
-* Functions and modular code
-* CSV file handling
-* Input validation
-* Basic data processing
-
-### Java Student Manager
-
-A console-based application for adding, viewing, searching, and removing student records.
-
-**Skills demonstrated:**
-
-* Java programming
-* Object-oriented programming
-* Classes and objects
-* ArrayList
-* User input with `Scanner`
-
-### SQL Library Database
-
-A relational database project for managing books, authors, members, and loans in a library system.
-
-**Skills demonstrated:**
-
-* SQL
-* Database design
-* Primary and foreign keys
-* JOIN queries
-* Aggregate functions
-
 ## Technologies Used
 
 * HTML5
