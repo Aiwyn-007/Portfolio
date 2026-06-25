@@ -26,10 +26,6 @@ My goal is to gain practical experience as a working student and continue develo
 │   ├── images/
 │   └── documents/
 │       └── Aiwyn_Anish_CV.pdf
-├── projects/
-│   ├── python-expense-tracker/
-│   ├── java-student-manager/
-│   └── sql-library-database/
 ├── cv/
 │   ├── cv.tex
 │   └── Aiwyn_Anish_CV.pdf
