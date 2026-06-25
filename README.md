@@ -49,8 +49,8 @@ It includes:
 
 ## Technologies Used
 
-* HTML5
-* CSS3
+* HTML
+* CSS
 * JavaScript
 * Python
 * Java
