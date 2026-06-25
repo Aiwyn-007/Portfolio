@@ -65,7 +65,7 @@ It includes:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-NAME.git
+git clone https://github.com/Aiwyn-007/Portfolio.git
 ```
 
 2. Open the project folder.
