@@ -6,8 +6,8 @@ This repository contains the source code and supporting materials for my persona
 
 ## Live Portfolio
 
-* **Portfolio website:** `https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME/`
-* **GitHub repository:** `https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-NAME`
+* **Portfolio website:** `https://aiwyn-007.github.io/Portfolio/`
+* **GitHub repository:** `https://github.com/Aiwyn-007/Portfolio`
 
 ## About Me
 
