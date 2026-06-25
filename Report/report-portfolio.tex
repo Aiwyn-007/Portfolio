@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  pdftitle={Computer Science Portfolio Report}
+}
+
+\title{Computer Science Portfolio Report}
+\author{Aiwyn Abraham Anish}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This report describes the design, implementation, and content of my
+computer science portfolio. The portfolio was created to present my
+technical skills, academic development, and practical programming work
+for working student opportunities in software engineering.
+
+The live portfolio website is available at:
+
+\begin{center}
+\url{https://aiwyn-007.github.io/Portfolio/}
+\end{center}
+
+The corresponding GitHub repository is available at:
+
+\begin{center}
+\url{https://github.com/Aiwyn-007/Portfolio}
+\end{center}
+
+The portfolio combines a responsive personal website, technical project
+materials, a LaTeX-created curriculum vitae, and this report. GitHub
+Pages was selected because it provides a simple way to publish a static
+website directly from a GitHub repository.
+
+\section{Portfolio Website Structure}
+
+The portfolio is implemented as a single-page website with anchor-based
+navigation. The main sections are:
+
+\begin{itemize}
+    \item \textbf{Introduction section:} Introduces my professional goal as a
+    future software engineer and provides quick navigation actions.
+    \item \textbf{About section:} Summarises my interests also states my approach to
+    learning and focus on efficient and user-centred software.
+    \item \textbf{Skills section:} Presents programming languages, web
+    fundamentals, development tools, and professional skills.
+    \item \textbf{Education section:} States my BEng Software Engineering
+    studies and expected graduation date.
+    \item \textbf{Portfolio section:} Links to selected technical exercises
+    and explains the technologies and outcomes of each project.
+    \item \textbf{Contact section:} Provides a professional contact method.
+\end{itemize}
+
+The website is designed to be responsive. CSS grid layouts, flexible
+navigation, and media queries allow the content to remain readable on
+desktop and mobile screens.
+
+\section{GitHub Repository Structure}
+
+The repository is organised to separate website files, documents, and
+technical exercises clearly:
+
+\begin{verbatim}
+portfolio/
+├── index.html
+├── README.md
+├── assets/
+├── cv/
+└── report/
+\end{verbatim}
+
+The \texttt{index.html} file is the entry point for the website.
+The \texttt{assets} directory stores reusable documents and images,
+including the PDF version of my CV. The \texttt{projects} directory
+contains individual technical exercises. Each project includes source
+code and a README file explaining its purpose, setup, technologies, and
+key learning outcomes. The \texttt{cv} directory contains both the
+LaTeX source and compiled PDF of my CV. Finally, the \texttt{report}
+directory contains the source and PDF of this report.
+
+This structure improves maintainability because related files are grouped
+together. It also helps a hiring manager quickly locate the live website,
+project source code, CV, and documentation.
+
+\section{Design Decisions}
+
+A dark red-and-black visual theme was selected to create a modern
+and consistent appearance.Red is used as an accent colour
+for calls to action,headings and interactive elements while dark
+backgrounds improve contrast and focus attention on the content.
+
+The website uses a minimal single-page layout rather than many separate
+pages. This decision reduces navigation complexity and enables a hiring
+manager to review the most important information quickly. Clear headings,
+cards, whitespace, and concise text make the content scannable.
+
+The project cards are designed to focus on evidence of technical ability.
+For each project, the portfolio explains the problem, technologies used,
+and a link to the relevant source code. This is more useful than listing
+skills without practical examples.
+
+\section{Tools and Technologies}
+
+The following tools and technologies were used:
+
+\begin{itemize}
+    \item \textbf{HTML:} Used to define the semantic structure and
+    content of the portfolio website.
+    \item \textbf{CSS:} Used for layout, responsive behaviour, colours,
+    typography, cards, buttons, and media queries.
+    \item \textbf{JavaScript:} Available for future interactive features;
+    the current website prioritises a lightweight static implementation.
+    \item \textbf{Git and GitHub:} Used for version control, repository
+    hosting, and documentation.
+    \item \textbf{GitHub Pages:} Used to deploy the static website from
+    the repository.
+    \item \textbf{LaTeX:} Used to create a structured and reproducible CV
+    and project report.
+\end{itemize}
+
+GitHub Pages is appropriate for this project because the portfolio is a
+static site made from HTML and CSS files. Publishing from the repository
+also connects the live portfolio directly with its source code and
+technical documentation.
+
+\section{Strengths and Limitations}
+
+A key strength of the portfolio is its clear visual hierarchy. The
+website introduces my profile immediately, then presents skills,
+education, projects, and contact information in a logical order. The
+responsive layout makes the portfolio accessible across different screen
+sizes. The GitHub repository also demonstrates organisation, version
+control, and documentation practices.
+
+The main current limitation is that, as an early-stage software
+engineering student, the number and complexity of completed projects is
+still growing.A portfolio is stronger when each listed skill is
+supported by a visible project, test, demonstration, or code sample.
+Another limitation is that the current website has limited interactivity,
+which is an intentional trade-off to keep it lightweight and reliable.
+
+\section{Future Improvements}
+
+In future iterations,I would improve the portfolio by adding:
+
+\begin{itemize}
+    \item More completed projects with screenshots, live demos, and
+    detailed technical documentation.
+    \item A dedicated page for each project containing architecture,
+    challenges, testing, and lessons learned.
+    \item Automated testing and continuous integration for programming
+    exercises.
+    \item Accessibility improvements, including more detailed keyboard
+    navigation testing and colour-contrast checks.
+    \item A contact form implemented through a secure third-party service
+    or backend solution.
+    \item A downloadable CV button and links to professional profiles.
+\end{itemize}
+
+\section{Conclusion}
+
+This portfolio provides a professional foundation for presenting my
+technical development as a Software Engineering student.It combines a
+responsive website,organised GitHub repository,LaTeX CV, and practical
+technical exercises.This project will continue to evolve as I complete
+new coursework and software projects.
+
+\end{document}
