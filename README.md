@@ -11,11 +11,11 @@ This repository contains the source code and supporting materials for my persona
 
 ## About Me
 
-I am **Aiwyn Abraham Anish**, a Software Engineering student based in Berlin, Germany. I am interested in software development, web technologies, databases, algorithms, and building efficient, scalable, user-focused applications.
+I am Aiwyn Abraham Anish a Software Engineering student based in Berlin Germany.I am interested in software development,web technologies,databases,algorithms and building efficient and user-focused applications.
 
 My goal is to gain practical experience as a working student and continue developing my skills through real-world software projects.
 
-## Repository Structure
+##Repository Structure
 
 ```text
 .
@@ -38,8 +38,7 @@ My goal is to gain practical experience as a working student and continue develo
 
 The website is a responsive single-page portfolio built using HTML and CSS.
 
-It includes:
-
+It includes the following
 * Personal introduction
 * Technical skills
 * Education
@@ -47,7 +46,7 @@ It includes:
 * Contact information
 * Links to my CV and GitHub repository
 
-## Technologies Used
+Technologies Used
 
 * HTML
 * CSS
@@ -60,31 +59,8 @@ It includes:
 * GitHub Pages
 * LaTeX
 
-## Running the Website Locally
 
-1. Clone this repository:
-
-```bash
-git clone https://github.com/Aiwyn-007/Portfolio.git
-```
-
-2. Open the project folder.
-
-3. Open `index.html` in your web browser.
-
-## GitHub Pages Deployment
-
-This portfolio is deployed using GitHub Pages.
-
-To publish the website:
-
-1. Go to the repository **Settings**.
-2. Select **Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Select the `main` branch and the `/(root)` folder.
-5. Save the settings.
-
-## Documents
+ Documents
 
 * `cv/cv.tex` contains the LaTeX source code for my CV.
 * `cv/Aiwyn_Anish_CV.pdf` is the compiled PDF version of my CV.
