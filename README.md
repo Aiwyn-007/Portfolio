@@ -50,9 +50,7 @@ Technologies Used
 
 * HTML
 * CSS
-* JavaScript
 * Python
-* Java
 * SQL
 * Git
 * GitHub
